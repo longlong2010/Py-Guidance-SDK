@@ -20,6 +20,7 @@ make test
 ```
 obstacle_distance
 ultrasonic
+velocity
 imu (firmware version 1.3.7 and below)
 ```
 other API will be supported soon

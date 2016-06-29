@@ -46,6 +46,12 @@ PyObject* wrap_select_ultrasonic(PyObject* self, PyObject* args)
 	return Py_BuildValue("");
 }
 
+PyObject* wrap_select_velocity(PyObject* self, PyObject* args) 
+{
+	select_velocity();
+	return Py_BuildValue("");
+}
+
 PyObject* wrap_select_obstacle_distance(PyObject* self, PyObject* args) 
 {
 	select_obstacle_distance();
@@ -164,6 +170,7 @@ static PyMethodDef guidanceMethods[] =
 	{"release_transfer", wrap_release_transfer, METH_VARARGS, "Release the data transfer thread"},
 	{"select_imu", wrap_select_imu, METH_VARARGS, "Subscribe IMU data"},
 	{"select_ultrasonic", wrap_select_ultrasonic, METH_VARARGS, "Subscribe ultrasonic data"},
+	{"select_velocity", wrap_select_velocity, METH_VARARGS, "Subscribe velocity data"},
 	{"select_obstacle_distance", wrap_select_obstacle_distance, METH_VARARGS, "Subscribe obstacle distance"},
 	{"create_lock", wrap_create_lock, METH_VARARGS, "Create lock"},
 	{"enter", wrap_enter, METH_VARARGS, "Lock enter"},
